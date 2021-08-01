@@ -2,23 +2,24 @@
   import type { PictureProps } from "../interfaces";
 
   export let props: PictureProps;
+  export let isProfilePic: boolean = false;
 </script>
 
 {#if props.link}
   <a href={props.link} target="_blank">
-    <div class={props.profile ? "" : "border"}>
+    <div class={isProfilePic ? "" : "border"}>
       <img
         src={props.path}
-        class="{props.style ?? 'default'} {props.profile ? 'small' : ''}"
+        class="{props.style ?? 'default'} {isProfilePic ? 'small' : ''}"
         alt="profile"
       />
     </div>
   </a>
 {:else}
-  <div class={props.profile ? "" : "border"}>
+  <div class={isProfilePic ? "" : "border"}>
     <img
       src={props.path}
-      class="{props.style ?? 'default'} {props.profile ? 'small' : ''}"
+      class="{props.style ?? 'default'} {isProfilePic ? 'small' : ''}"
       alt="profile"
     />
   </div>
@@ -35,14 +36,13 @@
   .default {
     object-fit: cover;
     border-radius: 6px;
-    width: calc(100% -4px -24px);
+    width: calc(100% - 4px);
     height: auto;
     max-height: 300px;
     color: #333;
     border-style: solid;
     border-width: 2px;
     border-radius: 6px;
-    padding: 24px;
     background: #bad9ea;
   }
   .circle {

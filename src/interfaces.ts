@@ -13,7 +13,6 @@ export interface BlockProps extends Element {
 export interface PictureProps extends Element {
 	path: string;
 	style?: PictureBorders;
-	profile?: boolean;
 	link?: string;
 }
 
@@ -22,6 +21,6 @@ export type ElementProps = BlockProps | PictureProps;
 export interface AppProps {
 	title: string;
 	description?: string;
+	profilePicture: PictureProps;
 	elementProps: ElementProps[];
-	pictureProps: PictureProps;
 }

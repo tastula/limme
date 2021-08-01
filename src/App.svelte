@@ -15,7 +15,7 @@
 </script>
 
 <main>
-  <Picture props={props.pictureProps} />
+  <Picture props={props.profilePicture} isProfilePic />
   <h1>{props.title}</h1>
   {#if props.description}
     <p>{props.description}</p>

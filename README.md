@@ -16,6 +16,8 @@ npm run build  # for production
 
 See [Svelte's component template](https://github.com/sveltejs/component-template) for detailed instructions.
 
+Edit `settings.ts` to update the content.
+
 ## Credits
 
 - Favicon made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com).
