@@ -1,4 +1,4 @@
-import { ElementType, PictureBorders } from './enums';
+import { ElementType, IconStyle, PictureBorders } from './enums';
 import type { AppProps } from './interfaces';
 
 const appProps: AppProps = {
@@ -11,24 +11,39 @@ const appProps: AppProps = {
 	},
 	elementProps: [
 		{
-			element: ElementType.Block,
-			link: 'https://github.com/tastula',
-			text: 'GitHub',
-		},
-		{
-			element: ElementType.Block,
-			link: 'https://t.me/tastula',
-			text: 'Telegram',
-		},
-		{
-			element: ElementType.Block,
-      link: 'https://instagram.com/tastulad',
-			text: 'Instagram',
+			element: ElementType.IconRow,
+			icons: [
+				{
+					element: ElementType.Icon,
+					link: 'https://github.com/tastula',
+					icon: IconStyle.GitHub,
+				},
+				{
+					element: ElementType.Icon,
+					link: 'https://instagram.com/tastulad',
+					icon: IconStyle.Instagram,
+				},
+				{
+					element: ElementType.Icon,
+					link: 'https://t.me/tastula',
+					icon: IconStyle.Telegram,
+				},
+				{
+					element: ElementType.Icon,
+					link: 'mailto:valtteri.tastula@tuni.fi',
+					icon: IconStyle.Email,
+				},
+			],
 		},
 		{
 			element: ElementType.Block,
 			link: 'https://www.youtube.com/watch?v=kYWwULruwZc',
 			text: 'Uplifting indie pop',
+		},
+		{
+			element: ElementType.Block,
+			link: 'https://www.youtube.com/channel/UCvlj0IzjSnNoduQF0l3VGng',
+			text: 'Not so uplifting news',
 		},
 		{
 			element: ElementType.Block,
